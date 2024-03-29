@@ -21,14 +21,21 @@ public class Main {
 
 /////////////////////////////////////////////////////////////////        
 
-        ArrayList<Integer> arrayList = new ArrayList<>();
-        arrayList.add(15);
-        arrayList.add(25);
-        arrayList.add(10);
+        ArrayList<ArrayList<Integer>> arrayList = new ArrayList<>();
+
+        ArrayList<Integer> innerList1 = new ArrayList<>();
+
+        innerList1.add(15);
+        innerList1.add(25);
+        innerList1.add(10);
+
+        arrayList.add(innerList1);
 
         System.out.println("Iterating over elements in array list:");
-        for (Integer value : arrayList) {
-            System.out.print(value + " ");
+        for (ArrayList<Integer> innerList : arrayList) {
+            for (Integer value : innerList) {
+                System.out.print(value + " ");
+            } 
         }
         System.out.println("\n");
 
